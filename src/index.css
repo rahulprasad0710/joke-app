@@ -16,9 +16,16 @@
 }
 
 @font-face {
-    font-family: "Montserrat";
+    font-family: "Montserrat-Regular";
     src: local("Montserrat"),
-        url("./assets/fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+        url("./assets/fonts/Montserrat/Montserrat-Regular.ttf")
+            format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: local("Montserrat"),
+        url("./assets/fonts/Montserrat/Montserrat-SemiBold.ttf")
+            format("truetype");
 }
 
 body {

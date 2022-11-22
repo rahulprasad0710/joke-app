@@ -14,7 +14,7 @@
         width: 158px;
         height: 19px;
         margin: 20px 64px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Montserrat-SemiBold", sans-serif;
         text-transform: uppercase;
         font-size: 15px;
         font-weight: 600;
@@ -25,5 +25,71 @@
     }
     .nav-item-text:last-child {
         margin-right: 0px;
+    }
+}
+
+.home {
+    position: relative;
+    .home_cover_img-container {
+        position: relative;
+    }
+    .home-cover-content {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        text-align: center;
+    }
+    .home_cover-title {
+        width: 350px;
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: 48px;
+        line-height: 1.5;
+        font-style: normal;
+        font-stretch: normal;
+        font-weight: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: var(--dark-tan);
+        z-index: 10;
+    }
+
+    .home_cover-subtitle {
+        color: var(--white-two);
+        font-size: 28px;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 20px;
+    }
+    .home_input {
+        margin: 20px auto;
+        display: block;
+        width: 400px;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--black);
+        background-color: transparent;
+        background-clip: padding-box;
+        border: 1.8px solid var(--light-gray);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.2rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .home_input::placeholder {
+        color: var(--white);
+        opacity: 1;
+    }
+
+    .home_cover_pic {
+        z-index: 1;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }
