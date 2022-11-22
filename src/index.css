@@ -1,13 +1,93 @@
+:root {
+    --white: #f9f9f9;
+    --white-two: #ffffff;
+    --black: #303030;
+    --light-gray: #b2b2b2;
+    --red: #ff5b5b;
+    --weird-green: #57e690;
+    --pastel-orange: #ff915b;
+    --cyan: #57dbe6;
+    --dark-tan: #cfb995;
+    --light-tan: #d0ba93;
+    --pale-orange: #ffbe5b;
+    --kiwi-green: #8fe360;
+    --light-gold: #ffdf5b;
+    --light-dark: #5e5e5e;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"),
+        url("./assets/fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container-sm,
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1320px;
+    }
 }
