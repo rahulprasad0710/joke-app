@@ -14,8 +14,8 @@ const JokeCategory = () => {
     };
 
     return (
-        <div className='joke-category container'>
-            <div className='category-container'>
+        <div className='catogory'>
+            <div className='category-container container'>
                 {item && (
                     <CategoryItem
                         categories={item}
