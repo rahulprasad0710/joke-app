@@ -104,11 +104,24 @@
         width: 400px;
         background-color: var(--white-two);
         color: var(--dark-tan);
-        padding: 5px 10px;
+        padding: 10px 10px;
         border-bottom: 1px solid var(--light-gray);
         &:last-child {
             border-bottom: none;
         }
+    }
+    .dropdown-joke-link {
+        color: var(--light-dark);
+    }
+    .joke-text {
+        display: block;
+        max-width: 300px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        font-family: "Montserrat", sans-serif;
     }
 
     .home_input::placeholder {
