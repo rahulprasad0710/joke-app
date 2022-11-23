@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import cover_pic from "../assets/assets_Homework_Front-End_01/bitmap@3x.png";
 import JokeCategory from "../components/JokeCategory";
+import JokeContainer from "../components/JokeContainer";
 
 const Home = () => {
     return (
@@ -30,6 +31,9 @@ const Home = () => {
             </section>
             <section>
                 <JokeCategory />
+            </section>
+            <section>
+                <JokeContainer />
             </section>
         </div>
     );

@@ -1,7 +1,7 @@
 import React from "react";
 
-const JokeItem = () => {
-    return <div>JokeItem</div>;
+const JokeItem = ({ jokeItem }) => {
+    return <div>{jokeItem.value}</div>;
 };
 
 export default JokeItem;
