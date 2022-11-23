@@ -30,6 +30,7 @@
 
 .home {
     position: relative;
+    background-color: var(--white);
     .home_cover_img-container {
         position: relative;
     }
@@ -91,5 +92,36 @@
         width: 100%;
         background-size: contain;
         background-repeat: no-repeat;
+    }
+}
+
+.category-container {
+    padding: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .category-item {
+        width: 206px;
+        margin: 10px 5px;
+        height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        line-height: 1.43;
+        font-stretch: normal;
+        font-size: 14px;
+        color: var(--white-two);
+        background-color: var(--dark-tan);
+        padding: 10px 20px;
+        border-radius: 2px;
+        border: 1px solid var(--white);
+        transition: all 0.5s;
+        cursor: pointer;
+        &:hover {
+            color: var(--black);
+            border: 1px solid var(--light-dark);
+        }
     }
 }
