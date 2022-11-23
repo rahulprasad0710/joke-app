@@ -3,10 +3,8 @@ import { useItem } from "../hooks/useItem";
 import API from "../api/api";
 import JokeItem from "./JokeItem";
 
-const JokeContainer = () => {
-    const [query, setQuery] = useState("all");
-
-    const { item, err } = useItem(`${API.getJokes}+${query}`);
+const JokeContainer = ({ searchCategory }) => {
+    const { item, err } = useItem(`${API.getJokes}+${searchCategory}`);
 
     return (
         <div className='joke-container container'>

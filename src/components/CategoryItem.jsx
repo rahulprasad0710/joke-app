@@ -1,12 +1,15 @@
 import React from "react";
 
-const CategoryItem = ({ categories }) => {
+const CategoryItem = ({ categories, handleCategory }) => {
     console.log(categories);
     return (
         <>
             {categories &&
                 categories.map((item, index) => (
-                    <div key={index} className='category-item'>
+                    <div
+                        onClick={() => handleCategory(item)}
+                        key={index}
+                        className='category-item'>
                         {item}&nbsp;JOKES
                     </div>
                 ))}
