@@ -8,6 +8,7 @@ export const useItem = (API) => {
     useEffect(() => {
         const fetchItem = async () => {
             try {
+                console.log(API);
                 const response = await axios.get(API);
                 if (response && response.data) setItem(response.data);
                 console.log(response.data);
