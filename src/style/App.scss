@@ -25,10 +25,10 @@ $medium: 800px;
     margin: 5px 0px;
 }
 
-.like-up:hover {
+.like-up {
     background-color: var(--weird-green);
 }
-.like-down:hover {
+.like-down {
     background-color: var(--red);
 }
 
@@ -502,10 +502,78 @@ nav {
     .back-btn-container {
         padding: 10px 0px;
     }
-}
 
-.joke-box {
-    // padding: 10px;
-    background-color: var(--white-two);
-    min-height: 200px;
+    .main-content {
+        display: flex;
+        gap: 20px;
+        .joke-box {
+            padding: 10px 20px;
+            flex: 3;
+            // padding: 10px;
+            background-color: var(--white-two);
+            min-height: 200px;
+            .joke-title {
+                text-transform: uppercase;
+                font-family: "Montserrat", sans-serif;
+                color: var(--dark-tan);
+                font-weight: 600;
+            }
+        }
+
+        .catg-container {
+            flex: 1;
+            background-color: var(--white-two);
+            padding: 10px;
+
+            .catg-title {
+                font-weight: bold;
+            }
+            li {
+                list-style: none;
+                text-transform: capitalize;
+                margin: 2px 0px;
+            }
+        }
+        @media screen and (max-width: $medium) {
+            .joke-box {
+                padding: 10px;
+                flex: 2;
+            }
+
+            .catg-container {
+                flex: 1;
+            }
+        }
+        @media screen and (max-width: $small) {
+            flex-direction: column;
+            align-items: center;
+            .joke-box {
+                padding: 5px;
+                max-width: 300px;
+                .joke-title {
+                    text-transform: uppercase;
+                    font-family: "Montserrat", sans-serif;
+                    color: var(--dark-tan);
+                    font-weight: 600;
+                }
+                flex: 1;
+                // padding: 10px;
+                background-color: var(--white-two);
+                min-height: 200px;
+            }
+
+            .catg-container {
+                width: 300px;
+
+                .catg-title {
+                    font-weight: bold;
+                }
+                li {
+                    list-style: none;
+                    text-transform: capitalize;
+                    margin: 2px 0px;
+                }
+            }
+        }
+    }
 }
