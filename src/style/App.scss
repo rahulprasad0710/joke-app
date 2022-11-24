@@ -237,23 +237,23 @@ nav {
     }
     @media screen and (max-width: $medium) {
         .home-cover-content {
-            top: 10%;
+            top: 20%;
             left: 50%;
-            transform: translate(-50%, 0%);
+            transform: translate(-50%, 20%);
         }
         .home_cover-subtitle {
             color: var(--white-two);
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 2px;
         }
         .home_cover-title {
-            font-size: 30px;
+            font-size: 35px;
         }
         .home_input {
             width: 350px;
             margin: 5px auto;
-            line-height: 0.5;
-            padding: 0.3rem 0.5rem;
+            line-height: 1;
+            padding: 0.5rem 1rem;
             font-size: 0.75rem;
         }
     }
@@ -275,6 +275,11 @@ nav {
             padding: 0.2rem 0.5rem;
             font-size: 0.75rem;
         }
+        .home_cover-subtitle {
+            color: var(--white-two);
+            font-size: 12px;
+            margin-bottom: 1px;
+        }
     }
 }
 
@@ -282,51 +287,69 @@ nav {
 
 // }
 
+//Joke Category
 .catogory {
     background-color: var(--white);
-}
-.category-container {
-    padding: 20px 0px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    .category-container {
+        padding: 20px 0px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
-    .category-item {
-        width: 206px;
-        margin: 5px 8px 7.5px;
-        height: 20px;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        line-height: 1.43;
-        font-stretch: normal;
-        font-size: 14px;
-        color: var(--white-two);
-        background-color: var(--dark-tan);
-        padding: 14px 20px;
-        border-radius: 2px;
-        border: 1px solid var(--white);
-        transition: all 0.5s;
-        cursor: pointer;
-        &:hover {
-            color: var(--black);
-            border: 1px solid var(--light-dark);
+        .category-item {
+            width: 206px;
+            margin: 5px 8px 7.5px;
+            height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            line-height: 1.43;
+            font-stretch: normal;
+            font-size: 14px;
+            color: var(--white-two);
+            background-color: var(--dark-tan);
+            padding: 14px 20px;
+            border-radius: 2px;
+            border: 1px solid var(--white);
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover {
+                color: var(--black);
+                border: 1px solid var(--light-dark);
+            }
+        }
+
+        @media screen and (max-width: $medium) {
+            justify-content: space-around;
+            padding: 10px 0px;
+            .category-item {
+                width: 180px;
+                margin: 10px 5px;
+                padding: 15px 15px;
+            }
+        }
+        @media screen and (max-width: $small) {
+            overflow: hidden;
+            justify-content: space-evenly;
+            padding: 5px 0px;
+            .category-item {
+                padding: 6px 15px;
+                width: 100px;
+                margin: 5px;
+                font-size: 12px;
+                text-align: center;
+            }
         }
     }
 }
 
 .joke-container {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-
     display: grid;
     column-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     .joke-item {
         padding: 10px;
-
         margin: 10px 0px;
         background-color: var(--white-two);
 
@@ -356,6 +379,51 @@ nav {
             line-height: 1.57;
             letter-spacing: normal;
             color: var(--black);
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .joke-btn-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .joke-card-btn {
+            color: var(--dark-tan);
+            font-weight: 600;
+        }
+    }
+    @media screen and (max-width: $medium) {
+        column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        .joke-item {
+            width: 300px;
+            // margin: 10px 5px;
+            padding: 15px 15px;
+            .joke-title {
+                width: 180px;
+            }
+            .joke-value {
+                // width: 320px;
+            }
+        }
+    }
+    @media screen and (max-width: $small) {
+        column-gap: 0px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .joke-item {
+            width: 280px;
+            overflow: hidden;
+            // margin: 10px 5px;
+            padding: 15px 15px;
+            .joke-title {
+                width: 150px;
+            }
+            .joke-value {
+                width: 200px;
+            }
         }
     }
 }

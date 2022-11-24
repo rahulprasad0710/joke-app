@@ -1,7 +1,15 @@
 import React from "react";
 
 const CategoryItem = ({ categories, handleCategory }) => {
-    console.log(categories);
+    const colors = [
+        "#ff5b5b",
+        "#ff915b",
+        "#ffbe5b",
+        "#ffdf5b",
+        "#57e690",
+        "#8fe360 ",
+        "#57dbe6",
+    ];
     return (
         <>
             {categories &&
@@ -9,6 +17,10 @@ const CategoryItem = ({ categories, handleCategory }) => {
                     <div
                         onClick={() => handleCategory(item)}
                         key={index}
+                        style={{
+                            backgroundColor:
+                                colors[Math.floor(Math.random() * 7)],
+                        }}
                         className='category-item'>
                         {item}&nbsp;JOKES
                     </div>
