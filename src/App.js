@@ -11,11 +11,11 @@ function App() {
             <Navbar />
             <CoverSection />
             <Switch>
-                <Route exact path='/'>
-                    <JokeCategory />
-                </Route>
                 <Route path='/joke/:id'>
                     <Joke />
+                </Route>
+                <Route exact path='/'>
+                    <JokeCategory />
                 </Route>
             </Switch>
         </Router>

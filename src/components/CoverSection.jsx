@@ -87,6 +87,9 @@ const CoverSection = () => {
                                         key={joke.id}
                                         className='dropdown__item__'>
                                         <Link
+                                            onClick={() =>
+                                                showDropDownFn(false)
+                                            }
                                             className='dropdown-joke-link'
                                             to={`/joke/${joke.id}`}>
                                             <span className='joke-text'>

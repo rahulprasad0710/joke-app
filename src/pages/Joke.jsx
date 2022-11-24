@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import API from "../api/api";
+import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useItem } from "../hooks/useItem";
 import backArrow from "../assets/assets_Homework_Front-End_02/arrow-left.png";
@@ -10,6 +11,7 @@ import likeDown from "../assets/assets_Homework_Front-End_02/hand-copy.png";
 
 const Joke = () => {
     const { id } = useParams();
+    let history = useHistory();
     const { item, err } = useItem(`${API.getJokeItem}${id}`);
     const { item: catg, err: error } = useItem(API.getCategory);
     const [joke, setJoke] = useState({});
@@ -24,7 +26,7 @@ const Joke = () => {
         <div className='joke-page'>
             <div className='container'>
                 <div className='back-btn-container'>
-                    <div className='circle'>
+                    <div onClick={() => history.goBack()} className='circle'>
                         <img src={backArrow} alt='Back' />
                     </div>
                 </div>
