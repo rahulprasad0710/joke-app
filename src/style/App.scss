@@ -11,6 +11,65 @@ $medium: 800px;
     }
 }
 
+.btn-like {
+    background-color: var(--light-dark);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1px solid var(var(--black));
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin: 5px 0px;
+}
+
+.like-up:hover {
+    background-color: var(--weird-green);
+}
+.like-down:hover {
+    background-color: var(--red);
+}
+
+.btn-secondary {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    display: flex;
+    min-width: 160px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px 10px;
+    margin: 5px;
+    font-weight: 600;
+    color: var(--light-tan);
+    border: 1px solid var(--light-tan);
+    transition: all 0.5s ease-in-out;
+    background-color: var(--white-two);
+    cursor: pointer;
+    &:hover {
+        color: var(--dark-tan);
+        border: 1px solid var(--dark-tan);
+    }
+    &:disabled {
+        background-color: var(--white);
+        cursor: default;
+    }
+}
+
+.circle {
+    border-radius: 35% 65% 74% 26% / 17% 16% 84% 83%;
+    // border-radius: 54% 46% 74% 26% / 39% 16% 84% 61%;
+    background: var(--black);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
 nav {
     height: 60px;
     width: 100vw;
@@ -348,6 +407,7 @@ nav {
     display: grid;
     column-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
+
     .joke-item {
         padding: 10px;
         margin: 10px 0px;
@@ -427,12 +487,25 @@ nav {
         }
     }
 }
-
+.joke-pagination-container {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .joke-page {
     background-color: var(--white);
     min-height: 40vh;
+
+    .back-btn-container {
+        padding: 10px 0px;
+    }
 }
 
 .joke-box {
+    // padding: 10px;
     background-color: var(--white-two);
+    min-height: 200px;
 }

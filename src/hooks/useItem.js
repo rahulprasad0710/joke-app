@@ -11,7 +11,7 @@ export const useItem = (API) => {
                 console.log(API);
                 const response = await axios.get(API);
                 if (response && response.data) setItem(response.data);
-                console.log(response.data);
+                // console.log(response.data);
             } catch (error) {
                 setErr(error);
             }
