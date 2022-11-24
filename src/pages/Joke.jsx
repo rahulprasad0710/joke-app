@@ -12,7 +12,6 @@ const Joke = () => {
             <div className='container'>
                 {item && (
                     <div className='joke-box'>
-                        <h1>{item?.categories[0]} JOKE</h1>
                         <p>{item.value}</p>
                     </div>
                 )}

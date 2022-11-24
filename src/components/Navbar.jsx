@@ -1,20 +1,26 @@
-import React from "react";
+import { useState } from "react";
 
 const Navbar = () => {
+    const [navOpen, setnavOpen] = useState(false);
     return (
-        <div className='navbar'>
-            <div className='navbar-container container'>
-                <div className='nav-item'>
-                    <div className='nav-item-text'>SO&nbsp;FUNKTIONIERT'S</div>
-                </div>
-                <div className='nav-item'>
-                    <div className='nav-item-text'>SONDERANGEBOTE</div>
-                </div>
-                <div className='nav-item'>
-                    <div className='nav-item-text'>MEIN BEREICH</div>
-                </div>
+        <nav>
+            <div onClick={() => setnavOpen(!navOpen)} class='hamburger'>
+                <div class='line1'></div>
+                <div class='line2'></div>
+                <div class='line3'></div>
             </div>
-        </div>
+            <ul class={navOpen ? "nav-links open" : "nav-links"}>
+                <li>
+                    <a href='/'>SO&nbsp;FUNKTIONIERT'S</a>
+                </li>
+                <li>
+                    <a href='/'>SONDERANGEBOTE</a>
+                </li>
+                <li>
+                    <a href='/'>MEIN BEREICH</a>
+                </li>
+            </ul>
+        </nav>
     );
 };
 

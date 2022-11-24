@@ -8,7 +8,9 @@ const JokeItem = ({ jokeItem }) => {
                 {jokeItem?.categories[0] ? " " : null} JOKE
             </div>
             <p className='joke-value'>{jokeItem.value}</p>
-            <Link to={`/joke/${jokeItem.id}`}>SEE STATS</Link>
+            <div>
+                <Link to={`/joke/${jokeItem.id}`}>SEE STATS</Link>
+            </div>
         </div>
     );
 };
